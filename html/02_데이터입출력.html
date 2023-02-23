@@ -38,6 +38,7 @@
                 border: 2px solid red;
             }
         </style>
+    </head>
     <body>
         <h3>innerHTML</h3>
         <pre>
@@ -99,6 +100,11 @@
             질문에 대한 "예" / "아니오" 결과를 얻고자 할 때 사용하는 대화상자를 띄우는 함수
             - 예/확인 : true 반환
             - 아니오/취소 : false 반환
+
+            <!-- +
+                사용자에게 메세지를 보여주고 확인이나 취소를 누르면
+                그 결과를 불린값으로 반환 / window는 생략가능
+            -->
         </pre>
 
         <div id="confirmTest" class="area1-box"></div>
@@ -112,6 +118,7 @@
             텍스트를 작성할 수 있는 대화상자
 
             - 확인 : 입력한 값을 반환
+            <!-- ++ 사용자에게 메세지를 보여주가, 사용자가 입력한 문자열 반환 -->
             - 취소 : null 반환
         </pre>
 
@@ -119,6 +126,41 @@
 
         <!-- external 방식 -->
         <script src="../js/02_데이터입출력.js"></script>
-    </head>
     </body>
+
+    <!-- 헷갈리는 개념 정리 -->
+
+    <!-- console.log
+        이미 정의된 모든 종류의 변수를 출력하거나 사용자에게
+        표시되어야 하는 메시지를 출력하는데 사용
+    -->
+
+    <!-- onclick / click 
+        클릭 시 어떠한 이벤트가 발생하게 하기 위해서 사용하는 함수
+
+        on키워드로 시작(on~) : ~한 이벤트 발생 시
+    -->
+
+    <!-- document는 DOM객체?
+        브라우저 안에 출력될 HTML 창에 대한 객체
+        
+        document.getElementById()
+        DOM 트리에서 특정 DOM 객체를 찾아내고 싶을 때
+        id 속성값을 가지고 찾는 방법
+
+        변수=객체.객체(.getter()) 형식으로 가져오는 것은 getter,
+
+        변수명.속성명(.하위속성명) = "속성값" 형식으로 쓰면 setter가 내부적으로 자동 실행
+    -->
+
+    <!-- innerHTML
+        시작태그와 종료태그 사이에 들어있는 HTML 콘텐츠를 나타내는 문자열 정보
+
+        ex)
+        element.innerText : element 안의 text값만 가져옴
+        element.innerHTML : element 안의 html을 가져옴
+    -->
+
+
+
 </html>
