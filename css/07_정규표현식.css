@@ -1,0 +1,17 @@
+.area {
+    width: 500px;
+    min-height: 300px; /* 최소 300이고 300높이로 시작 더 들어오면 늘어남 */
+    border: 1px solid black;
+}
+
+.confirm {
+    color: green;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    font-family: '궁서';
+}

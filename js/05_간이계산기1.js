@@ -11,7 +11,6 @@ function plus() {
 
     result.innerText = n1 + n2;
 }
-
 function minus() {
     // 위에는 풀어서 쓴거고 이렇게 쓸수도있음)
     result.innerText = Number(num1.value)-Number(num2.value);
