@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>자식팝업</title>
+    </head>
+    <body>
+        <h3>팝업창 입니다</h3>
+        <h4>부모로 부터 전달 받은 값 : <span id="result"></span></h4>
+
+        부모창으로 전달 :
+        <input type="text" id="childInput">
+        <button id="sendParent">전달하고 닫기</button>
+
+        <script>
+            // 부모한테 얻어온 값 띄우기
+            // span 요소
+            const result = document.getElementById("result");
+
+            // 부모창에 작성된 값 읽어오기
+            // 부모창을 나타내는 객체 : opener
+            const parentValue = opener.document.getElementById("parentInput").value;
+
+            result.innerText = parentValue; // 화면 출력
+
+            // ------------------------------------------------
+
+            // 부모창으로 값 전달
+            const chileInput = document.getElementById("childInput");
+            const sendParent = document.getElementById("sendParent");
+
+            sendParent.addEventListener("click", function() {
+                opener.document.getElementById("result").value = chileInput.value;
+                // 부모창.부모창문서(10_window내장객체.html)안의 result를 가진 요소를 얻어와 value에
+                // childInput에 작성된값을 대입해라
+
+                // 현재 창 닫기
+                window.close();
+            })
+
+
+        </script>
+    </body>
+</html>
